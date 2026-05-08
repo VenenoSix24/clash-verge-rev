@@ -508,7 +508,11 @@ export const GroupsEditorViewer = (props: Props) => {
         setCurrData(nextData)
       }
 
-      await saveProfileFile(property, nextData)
+      if (!(await saveProfileFile(property, nextData))) {
+        await fetchContent()
+        onClose()
+        return
+      }
       showNotice.success('shared.feedback.notifications.saved')
       setPrevData(nextData)
       onSave?.(prevData, nextData)
@@ -528,7 +532,7 @@ export const GroupsEditorViewer = (props: Props) => {
     >
       <DialogTitle>
         {
-          <Box display="flex" justifyContent="space-between">
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             {t('profiles.modals.groupsEditor.title')}
             <Box>
               <Button

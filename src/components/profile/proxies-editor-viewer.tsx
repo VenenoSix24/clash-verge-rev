@@ -355,7 +355,11 @@ export const ProxiesEditorViewer = (props: Props) => {
 
   const handleSave = useLockFn(async () => {
     try {
-      await saveProfileFile(property, currData)
+      if (!(await saveProfileFile(property, currData))) {
+        await fetchContent()
+        onClose()
+        return
+      }
       showNotice.success('shared.feedback.notifications.saved')
       onSave?.(prevData, currData)
       onClose()
@@ -374,7 +378,7 @@ export const ProxiesEditorViewer = (props: Props) => {
     >
       <DialogTitle>
         {
-          <Box display="flex" justifyContent="space-between">
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             {t('profiles.modals.proxiesEditor.title')}
             <Box>
               <Button

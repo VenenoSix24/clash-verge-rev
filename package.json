@@ -1,6 +1,6 @@
 {
   "name": "clash-verge",
-  "version": "2.4.8",
+  "version": "2.5.0-rc",
   "license": "GPL-3.0-only",
   "scripts": {
     "prepare": "husky || true",
@@ -41,9 +41,9 @@
     "@emotion/styled": "^11.14.1",
     "@juggle/resize-observer": "^3.4.0",
     "@monaco-editor/react": "^4.7.0",
-    "@mui/icons-material": "^7.3.9",
-    "@mui/lab": "7.0.0-beta.17",
-    "@mui/material": "^7.3.9",
+    "@mui/icons-material": "^9.0.0",
+    "@mui/lab": "9.0.0-beta.2",
+    "@mui/material": "^9.0.0",
     "@tanstack/react-query": "^5.96.1",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.23",
@@ -67,11 +67,12 @@
     "monaco-editor": "^0.55.1",
     "monaco-yaml": "^5.4.1",
     "nanoid": "^5.1.7",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "qrcode.react": "^4.2.0",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "react-error-boundary": "6.1.1",
     "react-hook-form": "^7.72.0",
-    "react-i18next": "17.0.2",
+    "react-i18next": "17.0.6",
     "react-markdown": "10.1.0",
     "react-router": "^7.13.1",
     "rehype-raw": "^7.0.0",
@@ -93,8 +94,8 @@
     "@types/validator": "^13.15.10",
     "@vitejs/plugin-legacy": "^8.0.0",
     "@vitejs/plugin-react": "^6.0.1",
-    "axios": "^1.13.6",
     "adm-zip": "^0.5.16",
+    "axios": "^1.13.6",
     "cli-color": "^2.0.4",
     "commander": "^14.0.3",
     "cross-env": "^10.1.0",
@@ -125,12 +126,12 @@
       "eslint --fix --max-warnings=0",
       "biome format --write"
     ],
-    "*.{css,scss,json,md,yaml,yml}": [
+    "*.{css,scss,json,yaml,yml}": [
       "biome format --write"
     ]
   },
   "type": "module",
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
